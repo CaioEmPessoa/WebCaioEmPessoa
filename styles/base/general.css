@@ -27,6 +27,7 @@ h1 {
 
 p {
     font-size: 20px;
+    text-indent: 50px;
 }
 
 a {
@@ -44,7 +45,8 @@ button {
 }
 
 hr {
-    color: #d5fff6;
+    color: var(--accent);
+    background-color: var(--accent);
 }
 
 br {
