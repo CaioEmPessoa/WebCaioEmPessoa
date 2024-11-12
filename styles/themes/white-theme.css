@@ -1,0 +1,13 @@
+:root {
+    --text: #000000;
+    --background: #eae2e0;
+    --accent: #000000;
+    --border: #eae2e0;
+    --hover: #ddd2cf;
+    --second-background: #ebdbd7;
+    /* --border: black; */
+    /* --primary: #8a90ed;
+    --button:#8a90ed;
+    --button-hover: #8692f8;
+    --secondary: #8c155a; */
+}

@@ -1,0 +1,14 @@
+:root {
+    --text: #ffffff;
+    --background: #000000;
+    --accent: #ffffff; 
+    --border: #d5fff6;
+    --hover: #343343;
+    --second-background: rgb(6, 6, 6);
+    /* --border:black; */
+    /* --second-background: #0f1565; */
+    /* --primary: #8a90ed;
+    --button:#8a90ed;
+    --button-hover: #8692f8;
+    --secondary: #8c155a;*/
+}
