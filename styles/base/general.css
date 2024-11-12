@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "starbound-font";
+    src: url("/src/fonts/starbound-font.otf");
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -9,15 +14,19 @@ html {
 }
 
 body {
-    font-family: "Anonymous Pro";
+    font-family: "Consolas";
     color: var(--text);
     background-color: var(--background);
     height: 100%;
 }
 
-button {
-    background: none;
-    border: none;
+h1 {
+    font-family: "starbound-font";
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
 }
 
 a {
@@ -29,6 +38,16 @@ a:hover, button:hover{
     cursor: pointer;
 }
 
+button {
+    background: none;
+    border: none;
+}
+
 hr {
     color: #d5fff6;
+}
+
+br {
+    display: block;
+    margin-top: 14px;
 }
