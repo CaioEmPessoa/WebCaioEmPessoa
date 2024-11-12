@@ -1,3 +1,9 @@
+.index-content {
+    border-right: solid 2px var(--border);
+    border-left: solid 2px var(--border);
+    padding: 0px 60px;
+}
+
 .big-title {
     text-align: center;
 }
@@ -17,15 +23,6 @@
     animation: alternate 1s BorderColors infinite;
 }
 
-@keyframes BorderColors {
-    from {
-        border: solid 2px var(--text);
-    }
-    to {
-        border: solid 2px var(--accent);
-    }
-}
-
 .right-arrow, .left-arrow {
     width: 30px;
     height: 30px;
@@ -34,9 +31,39 @@
     margin: 0px 25px;
   }
 
+.about-page h1{
+    text-align: center;
+}
+
 .index-separator {
+    width: 80%;
     border: none;
     height: 3px;
     margin-top: 70px;
     margin-bottom: 50px;
+    margin: 70px auto 50px auto;
+}
+
+.cool-websites h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.websites-list {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.websites-list .iframely-embed{
+    width: 90%;
+    margin: 0px auto;
+}
+
+@keyframes BorderColors {
+    from {
+        border: solid 2px var(--text);
+    }
+    to {
+        border: solid 2px var(--accent);
+    }
 }
