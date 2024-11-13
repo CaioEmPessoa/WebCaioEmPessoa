@@ -1,7 +1,7 @@
 .index-content {
-    border-right: solid 2px var(--border);
-    border-left: solid 2px var(--border);
-    padding: 0px 60px;
+    border-right: solid 3px var(--border);
+    border-left: solid 3px var(--border);
+    border-top: solid 3px var(--border);
 }
 
 .big-title {
@@ -70,6 +70,16 @@
 .websites-list .website-card p {
     margin-top: 20px;
 }
+
+@media (max-width:800px) {
+    .index-content{
+        border-top: solid var(--border);
+        border-width: 5px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+  }
 
 @keyframes BorderColors {
     from {

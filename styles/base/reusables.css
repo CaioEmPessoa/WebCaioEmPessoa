@@ -1,6 +1,7 @@
 .content {
     width: 70%;
-    margin: 30px auto;
+    margin: 15px auto 0px auto;
+    padding: 50px 60px 25px 60px;
     align-content: center;
     display: flex;
     flex-direction: column;
@@ -26,3 +27,11 @@
         background: var(--accent-2);
     }
   }
+
+@media (max-width:800px) {
+  .content{
+    width: 100%;
+    margin: 0px;
+    padding: 15px 15px;
+  }
+}
