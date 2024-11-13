@@ -15,6 +15,9 @@ function trail (e) {
   
   document.body.appendChild(div);
   setTimeout(function(){document.body.removeChild(div)}, 290);
+  if (e.pageX >= 1.3*body.offsetWidth) {
+    alert("Another One")
+  }
 }
 addEventListener('mousemove', trail);
 
@@ -49,7 +52,7 @@ function includeHTML() {
 
 includeHTML()
 
-let body = document.getElementById("body")
+const body = document.getElementById("body")
 body.onkeydown = (e) => {
   if (e["key"] == "t") {
     if (data["trail"]){
