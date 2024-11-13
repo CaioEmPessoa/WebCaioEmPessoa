@@ -55,12 +55,16 @@
 
 .websites-list {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .websites-list .website-card {
     width: 100%;
-    padding: 0px 15px;
-    margin: 0px auto;
+    max-width: 500px;
+    min-height: 250px;
+    padding: 0px 17px;
+    margin: 25px auto;
+    flex: 50%;
 }
 
 .websites-list .website-card p {

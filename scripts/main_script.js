@@ -15,7 +15,7 @@ function trail (e) {
   
   document.body.appendChild(div);
   setTimeout(function(){document.body.removeChild(div)}, 290);
-  if (e.pageX >= 1.3*body.offsetWidth) {
+  if (e.pageX >= 1.2*body.offsetWidth) {
     alert("Another One")
   }
 }
