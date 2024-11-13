@@ -57,15 +57,19 @@
     display: flex;
 }
 
-.websites-list .website-card{
+.websites-list .website-card {
     width: 100%;
     padding: 0px 15px;
     margin: 0px auto;
 }
 
+.websites-list .website-card p {
+    margin-top: 20px;
+}
+
 @keyframes BorderColors {
     from {
-        border: solid 2px var(--text);
+        border: solid 2px var(--accent-2);
     }
     to {
         border: solid 2px var(--accent);

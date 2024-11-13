@@ -1,3 +1,21 @@
+// funnies
+function trail (e) {
+	var div = document.createElement('div');
+  
+  div.classList.add('happyTrail');
+  
+  Object.assign(div.style, {
+    top: e.pageY + 'px',
+    left: e.pageX + 'px'
+  });
+  
+  document.body.appendChild(div);
+  setTimeout(function(){document.body.removeChild(div)}, 290);
+}
+
+addEventListener('mousemove', trail);
+
+
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
     /* Loop through a collection of all HTML elements: */

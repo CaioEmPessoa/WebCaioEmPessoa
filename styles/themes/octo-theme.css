@@ -1,7 +1,8 @@
 :root {
     --text: #28D8C1;
     --background: #000000;
-    --accent: #FD3B91; 
+    --accent: #FD3B91;
+    --accent-2: #28D8C1;
     --border: #FD3B91;
     --hover: #343343;
     --second-background: #492E79;
