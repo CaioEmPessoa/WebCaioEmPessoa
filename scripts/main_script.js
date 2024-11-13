@@ -1,3 +1,7 @@
+let data = {
+  "trail":true
+}
+
 // funnies
 function trail (e) {
 	var div = document.createElement('div');
@@ -12,7 +16,6 @@ function trail (e) {
   document.body.appendChild(div);
   setTimeout(function(){document.body.removeChild(div)}, 290);
 }
-
 addEventListener('mousemove', trail);
 
 
@@ -45,3 +48,16 @@ function includeHTML() {
   }
 
 includeHTML()
+
+let body = document.getElementById("body")
+body.onkeydown = (e) => {
+  if (e["key"] == "t") {
+    if (data["trail"]){
+      removeEventListener('mousemove', trail);
+      data["trail"] = false
+    } else {
+      addEventListener('mousemove', trail);
+      data["trail"] = true
+    }
+  }
+}
