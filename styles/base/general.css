@@ -41,6 +41,9 @@ a:hover, button:hover{
 button {
     background: none;
     border: none;
+    color: var(--text);
+    font-family: "Consolas";
+    font-size: 20px;
 }
 
 hr {
