@@ -35,6 +35,10 @@
     text-align: center;
 }
 
+.about-page p {
+    text-indent: 50px;
+}
+
 .index-separator {
     width: 80%;
     border: none;
@@ -50,12 +54,12 @@
 }
 
 .websites-list {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
 }
 
-.websites-list .iframely-embed{
-    width: 90%;
+.websites-list .website-card{
+    width: 100%;
+    padding: 0px 15px;
     margin: 0px auto;
 }
 
