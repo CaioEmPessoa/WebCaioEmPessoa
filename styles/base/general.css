@@ -21,8 +21,9 @@ body {
 }
 
 h1 {
-    font-family: "starbound-font";
+    text-align: center;
     font-size: 40px;
+    font-family: "starbound-font";
 }
 
 p {
