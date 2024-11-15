@@ -17,10 +17,11 @@
 
 .pfp .pfp-img {
     width: 265px;
-    height: auto;
+    height: 265px;
     border-radius: 15px;
     padding: 10px;
     animation: alternate 1s BorderColors infinite;
+    object-fit: cover;
 }
 
 .right-arrow, .left-arrow {

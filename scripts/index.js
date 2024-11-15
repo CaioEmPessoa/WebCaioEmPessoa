@@ -18,10 +18,14 @@ export const Index = () => {
     }
 
     const changePfp = (dir) => {
+        console.log(imgIndex)
+        
         if (dir) {
-            imgIndex += 1;
+            if (imgIndex >= imgs.length-1) { imgIndex = 0; }
+            else {imgIndex += 1; }
         } else {
-            imgIndex -= 1;
+            if (imgIndex <= 0) { imgIndex = imgs.length - 1; }
+            else {imgIndex -= 1; }
         }
         pfpImg.src = "/src/imgs/pfp/" + imgs[imgIndex];
     }
