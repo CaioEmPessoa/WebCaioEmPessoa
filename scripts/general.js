@@ -1,10 +1,14 @@
 
 const topMenuChange = () => {
   const topMenuDiv = document.getElementById("top-menu")
-  if (window.scrollY <= 5) {
-    topMenuDiv.style.position = "initial"
+  const topMenuFixedDiv = document.getElementById("top-menu-fixed")
+
+  if (window.scrollY <= 10) {
+    topMenuDiv.style.visibility = "initial"
+    topMenuFixedDiv.style.visibility = "hidden"
   } else {
-    topMenuDiv.style.position = "fixed"
+    topMenuDiv.style.visibility = "hidden"
+    topMenuFixedDiv.style.visibility = "initial"
   }
 }
 

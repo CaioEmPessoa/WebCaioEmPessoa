@@ -26,9 +26,13 @@
   width: 100%;
   justify-content: center;
   margin-top: 15px;
-  margin-bottom: 15px;
-  bottom: 0;
+}
+
+.top-menu.fixed {
+  position: fixed;
   z-index: 99;
+  bottom: 0;
+  margin-bottom: 15px;
 }
 
 .top-menu-itens {
@@ -43,7 +47,7 @@
 .content {
   width: 70%;
   margin: 10px auto 0px auto;
-  padding: 50px 60px 25px 60px;
+  padding: 50px 60px;
   align-content: center;
   display: flex;
   flex-direction: column;
