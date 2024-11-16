@@ -150,6 +150,11 @@ const enableGeorgeMode = () => {
         }
     }
 
+    if (e["key"] == "Backspace") {
+      data["george_list"] = []
+      data["debug_list"] = []
+    }
+
   }
 
 }
