@@ -38,6 +38,22 @@
     flex-direction: column;
 }
 
+.heart {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  pointer-events: none;
+  background: url(/src/imgs/trails/heart.gif) no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+  
+}
+
+.heart.big {
+  width: 70px;
+  height: 70px;
+}
+
 .happyTrail {
     position: absolute;
     width: 13px;
