@@ -1,3 +1,16 @@
+
+const topMenuChange = () => {
+  const topMenuDiv = document.getElementById("top-menu")
+  if (window.scrollY <= 5) {
+    topMenuDiv.style.position = "initial"
+  } else {
+    topMenuDiv.style.position = "fixed"
+  }
+}
+
+addEventListener("scroll", topMenuChange)
+topMenuChange()
+
 export const General = () => {
   function includeHTML() {
     var z, i, elmnt, file, xhttp;

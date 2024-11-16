@@ -20,22 +20,33 @@
   display: none;
 }
 
-.project-home-icon {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 7px;
-  margin-left: 60px;
-  width:34px;
+.top-menu {
+  display: flex;
+  font-size: 20px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  bottom: 0;
+  z-index: 99;
+}
+
+.top-menu-itens {
+  display: flex;
+  border: solid 2px var(--border);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.top-menu-itens a {
+  margin: 5px 10px
 }
 
 .content {
-    width: 70%;
-    margin: 15px auto 0px auto;
-    padding: 50px 60px 25px 60px;
-    align-content: center;
-    display: flex;
-    flex-direction: column;
+  width: 70%;
+  margin: 10px auto 0px auto;
+  padding: 50px 60px 25px 60px;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .heart {
