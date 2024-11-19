@@ -98,6 +98,10 @@
     padding: 15px 15px;
   }
 
+  .constants {
+    display: none;
+  }
+
   .top-menu {
     margin-bottom: 5px;
   }

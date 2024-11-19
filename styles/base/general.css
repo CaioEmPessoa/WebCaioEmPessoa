@@ -12,6 +12,7 @@
 
 html {
     height: 100%;
+    width: 99.9vw; /* ¯\_(ツ)_/¯ */
     scrollbar-color: var(--accent-2) var(--accent);
 }
 
