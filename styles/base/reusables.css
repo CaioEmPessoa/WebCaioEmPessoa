@@ -32,14 +32,14 @@
   position: fixed;
   z-index: 99;
   bottom: 0;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   visibility: hidden;
 }
 
 .top-menu-itens {
   display: flex;
-  border: solid 2px var(--border);
-  background-color: rgba(0, 0, 0, 0.7);
+  border: solid 3px var(--border);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 .top-menu-itens a {
   margin: 5px 10px
