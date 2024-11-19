@@ -27,7 +27,7 @@
 
         console.log(hr.id, i)
 
-        titleJump.innerHTML = title.innerHTML
+        titleJump.innerHTML = title.textContent.replace(/[!:.]/g, "")
         titleJump.href = "#" + hr.id
 
         topMenu.appendChild(titleJump)
