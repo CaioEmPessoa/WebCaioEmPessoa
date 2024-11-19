@@ -1,0 +1,39 @@
+<div class="top-menu">
+    <div class="top-menu-itens" id="top-menu">
+
+    </div>
+</div>
+
+<div class="top-menu fixed">
+    <div class="top-menu-itens" id="top-menu-fixed">
+
+    </div>
+</div>
+
+<script>
+    const topMenu = document.getElementById("top-menu");
+    const topMenuFixed = document.getElementById("top-menu-fixed");
+
+    const titlesList = document.getElementsByTagName("h2")
+    const hrList = Array.from(document.getElementsByTagName("hr"))
+
+    console.log(hrList)
+
+    for (let i = 0; i < titlesList.length; i++) {
+        const title = titlesList[i];
+        const hr = hrList[i];
+        const titleJump = document.createElement("a")
+        const topBarHr = document.createElement("hr")
+
+        console.log(hr.id, i)
+
+        titleJump.innerHTML = title.innerHTML
+        titleJump.href = "#" + hr.id
+
+        topMenu.appendChild(titleJump)
+        topMenu.appendChild(topBarHr)
+    }
+
+    topMenuFixed.innerHTML = topMenu.innerHTML
+
+</script>
