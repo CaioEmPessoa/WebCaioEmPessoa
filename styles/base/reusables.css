@@ -33,6 +33,7 @@
   z-index: 99;
   bottom: 0;
   margin-bottom: 15px;
+  visibility: hidden;
 }
 
 .top-menu-itens {
