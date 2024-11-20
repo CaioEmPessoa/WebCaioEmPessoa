@@ -2,6 +2,10 @@
     font-family: "starbound-font";
     src: url("/src/fonts/starbound-font.otf");
 }
+@font-face {
+    font-family: "consola";
+    src: url("/src/fonts/consola.ttf");
+}
 
 * {
     padding: 0;
@@ -16,7 +20,7 @@ html {
 }
 
 body {
-    font-family: "Consolas";
+    font-family: "consola";
     color: var(--text);
     background-color: var(--background);
     height: 100%;
