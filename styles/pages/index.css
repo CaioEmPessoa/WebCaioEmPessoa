@@ -29,7 +29,13 @@
     height: 30px;
     cursor: pointer;
     border-radius: 100px;
-    margin: 0px 25px;
+  }
+
+.right-arrow {
+    margin-left:25px;
+  }
+.left-arrow {
+    margin-right:25px;
   }
 
 .about-page p {
