@@ -17,15 +17,11 @@
     const titlesList = document.getElementsByTagName("h2")
     const hrList = Array.from(document.getElementsByTagName("hr"))
 
-    console.log(hrList)
-
     for (let i = 0; i < titlesList.length; i++) {
         const title = titlesList[i];
         const hr = hrList[i];
         const titleJump = document.createElement("a")
         const topBarHr = document.createElement("hr")
-
-        console.log(hr.id, i)
 
         titleJump.innerHTML = title.textContent.replace(/[!:.]/g, "")
         titleJump.href = "#" + hr.id

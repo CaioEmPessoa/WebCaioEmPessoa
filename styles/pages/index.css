@@ -73,6 +73,9 @@
 .websites-list .website-card p {
     margin-top: 20px;
 }
+.websites-list .website-card button {
+    width: 100%;
+}
 
 @media (max-width:800px) {
     .index-content{
