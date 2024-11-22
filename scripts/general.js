@@ -20,7 +20,8 @@ export const General = () => {
               elmnt.innerHTML = "Page not found.";
             }
             /* Remove the attribute, and call this function once more: */
-            elmnt.removeAttribute("w3-include-html");
+            elmnt.outerHTML = elmnt.innerHTML
+            elmnt.innerHTML = ""
             includeHTML();
           }
         }
