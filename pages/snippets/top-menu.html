@@ -14,20 +14,21 @@
     const topMenu = document.getElementById("top-menu");
     const topMenuFixed = document.getElementById("top-menu-fixed");
 
-    const titlesList = document.getElementsByTagName("h2")
-    const hrList = Array.from(document.getElementsByTagName("hr"))
+    const jumpDivList = Array.from(document.getElementsByTagName("div"))
 
-    for (let i = 0; i < titlesList.length; i++) {
-        const title = titlesList[i];
-        const hr = hrList[i];
-        const titleJump = document.createElement("a")
-        const topBarHr = document.createElement("hr")
+    for (let i = 0; i < jumpDivList.length; i++) {
+        const el = jumpDivList[i]
+        if (el.classList == "jump"){
+            const title = el.title;
+            const titleJump = document.createElement("a")
+            const topBarHr = document.createElement("hr")
 
-        titleJump.innerHTML = title.textContent.replace(/[!:.]/g, "")
-        titleJump.href = "#" + hr.id
+            titleJump.innerHTML = title
+            titleJump.href = "#" + el.id
 
-        topMenu.appendChild(titleJump)
-        topMenu.appendChild(topBarHr)
+            topMenu.appendChild(titleJump)
+            topMenu.appendChild(topBarHr)
+        }
     }
 
     topMenuFixed.innerHTML = topMenu.innerHTML
