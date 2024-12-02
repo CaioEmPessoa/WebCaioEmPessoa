@@ -99,7 +99,7 @@
   }
 
   .constants {
-    display: none;
+    bottom: 0;
   }
 
   .top-menu {

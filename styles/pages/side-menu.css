@@ -10,15 +10,10 @@
 
 .side-menu {
     background-color: var(--second-background);
-    
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center; */
 
-    padding: 0px 30px;
     width: 320px;
-    position: fixed;
+    padding: 10px 0px;
+    position: fixed;    
     top: 0;
     bottom: 0;
     border-right: solid 3px var(--border);
@@ -28,6 +23,10 @@
     z-index: 90;
 
     transform: translateX(-320px);
+}
+
+.side-menu-itens {
+    padding: 0px 30px;
 }
 
 .side-menu-btn {
@@ -84,6 +83,56 @@
     display: flex;
     margin-top: 15px;
 }
+
+.side-menu-title {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow :hidden;
+    white-space: nowrap;
+}
+
+.side-menu-title h1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+
+.sm-title-01 {
+    --anim-start: -100%;
+    --anim-end: +100%;
+    animation: 2s linear infinite marqueeAnim;
+}
+.sm-title-02 {
+    --anim-start: 100%;
+    --anim-end: -100%;
+    animation: 3s linear infinite marqueeAnim;
+}
+.sm-title-03 {
+    --anim-start: 100%;
+    --anim-end: -100%;
+    animation: 2s alternate-reverse infinite marqueeAnim;
+}
+.sm-title-04 {
+    --anim-start: 100%;
+    --anim-end: -100%;
+    animation: 3s linear infinite marqueeAnim;
+}
+.sm-title-05 {
+    --anim-start: 100%;
+    --anim-end: -100%;
+    animation: 1s alternate-reverse infinite marqueeAnim;
+}
+.sm-title-06 {
+    --anim-start: 100%;
+    --anim-end: -100%;
+    animation: 5s alternate-reverse infinite marqueeAnim;
+}
+
+@keyframes marqueeAnim {
+    from {transform: translateX(var(--anim-start));}
+    to {transform: translateX(var(--anim-end))}
+  }
+
 
 @keyframes slideIntBtn {
     0% { transform: rotateZ(180deg)}
