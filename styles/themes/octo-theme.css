@@ -6,12 +6,9 @@
     --border: #FD3B91;
     --hover: #343343;
     --second-background: #492E79;
-    /* --border:black; */
-    /* --second-background: #0f1565; */
-    /* --primary: #8a90ed;
-    --button:#8a90ed;
-    --button-hover: #8692f8;
-    --secondary: #8c155a;*/
+
+    --auto: url("/src/imgs/cursors/NormalPink.cur"), auto;
+    --pointer: url("/src/imgs/cursors/selectPink.cur"), pointer!important;
 }
 
 /* 

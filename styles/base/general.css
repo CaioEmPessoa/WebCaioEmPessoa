@@ -12,6 +12,8 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
+    cursor: var(--auto);
 }
 
 html {
@@ -26,16 +28,18 @@ body {
     height: 100%;
 }
 
-h1 {
-    text-align: center;
-    font-size: 40px;
+h1, h2, h3, h4 , h5, h6 {
     font-family: "starbound-font";
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
 }
 
 h2 {
     text-align: center;
     font-size: 32px;
-    font-family: "starbound-font";
 }
 
 p {
@@ -47,8 +51,8 @@ a {
     color: inherit;
 }
 
-a:hover, button:hover{
-    cursor: pointer;
+a:hover, button:hover, button:hover *, a:hover * {
+    cursor: var(--pointer) !important;
 }
 
 button {

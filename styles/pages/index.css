@@ -27,7 +27,7 @@
 .right-arrow, .left-arrow {
     width: 30px;
     height: 30px;
-    cursor: pointer;
+    cursor: var(--pointer)!important;
     border-radius: 100px;
   }
 
