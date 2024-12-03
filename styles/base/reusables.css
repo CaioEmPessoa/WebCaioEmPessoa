@@ -1,3 +1,7 @@
+.center {
+  text-align: center;
+}
+
 .side-menu-btn {
   stroke: var(--accent);
   stroke-width:5;

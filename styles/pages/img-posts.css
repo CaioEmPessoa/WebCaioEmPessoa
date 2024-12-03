@@ -9,7 +9,7 @@
     margin: 10px auto 0px auto;
 }
 
-.imgs-flex {
+.imgs-container {
     display: flex;
     width: 90%;
     flex-direction: column;
@@ -27,9 +27,9 @@
     margin: 0px 15px;
     min-width: 0;
     flex: 1;
-
+    width: 100%;
+    max-width: 100%;
     object-fit: contain;
-
     cursor: var(--pointer);
 }
 
@@ -47,4 +47,8 @@
     flex: 1;
 
     margin: 0px 15px;
+}
+
+.post-separator {
+    margin: 30px 0px;
 }
