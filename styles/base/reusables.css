@@ -98,8 +98,10 @@
     padding: 15px 15px;
   }
 
-  .constants {
+  .top-right-constants, .side-menu-btn {
     bottom: 0;
+    top: unset!important;
+    z-index: 99999;
   }
 
   .top-menu {
