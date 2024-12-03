@@ -63,6 +63,16 @@ button {
     font-size: 20px;
 }
 
+button.disabled {
+    color: gray;
+    background-color: var(--disabled-bg);
+    cursor: var(--auto)!important;
+}
+
+button.disabled:hover {
+    background-color: var(--disabled-bg);
+}
+
 hr {
     color: var(--accent);
     background-color: var(--accent);

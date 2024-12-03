@@ -6,6 +6,7 @@
     --border: #FD3B91;
     --hover: #343343;
     --second-background: #492E79;
+    --disabled-bg: rgba(74, 46, 121, 0.7) ;
 
     --auto: url("/src/imgs/cursors/NormalPink.cur"), auto;
     --pointer: url("/src/imgs/cursors/selectPink.cur"), pointer!important;
