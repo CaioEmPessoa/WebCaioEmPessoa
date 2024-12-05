@@ -61,4 +61,9 @@ export const General = () => {
   
   addEventListener("scroll", topMenuChange)
 
+  let configBtn = document.getElementById("config-btn")
+  configBtn.onclick = () => {alert("Não faço nada ainda :P")}
+ 
+
+  
 }
