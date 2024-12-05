@@ -48,6 +48,8 @@ export const General = () => {
     const topMenuDiv = document.getElementById("top-menu")
     const topMenuFixedDiv = document.getElementById("top-menu-fixed")
   
+    if (topMenuDiv == null || topMenuFixedDiv == null) { return } // when open a page already scrolled, some menus may not appear
+
     if (window.scrollY <= 10) {
       topMenuDiv.style.visibility = "initial"
       topMenuFixedDiv.style.visibility = "hidden"
@@ -58,5 +60,5 @@ export const General = () => {
   }
   
   addEventListener("scroll", topMenuChange)
-  
+
 }
