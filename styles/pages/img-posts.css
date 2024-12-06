@@ -73,13 +73,15 @@
 
 .full-img-div .full-img {
     width: auto;
-    height: 60%;
+    height: 80%;
     object-fit: cover;
     display: block;
     margin: 0 auto;
     position: fixed;
     z-index: 5;
     align-self: center;
+
+    cursor: zoom-in;
 }
 
 .img-index {

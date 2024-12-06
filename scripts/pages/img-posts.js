@@ -34,6 +34,31 @@ const addRefImg = () => {
 
 addRefImg()
 
+const zoomOut = () => {
+    const fullImg = document.getElementById("full-img")
+    fullImg.style.height = "70%"
+    fullImg.style.cursor = "zoom-in"
+
+    fullImg.onclick = () => {zoomIn()}
+}
+
+const moreZoomIn = () => {
+    const fullImg = document.getElementById("full-img")
+    fullImg.style.height = "100%"
+    fullImg.style.cursor = "zoom-out"
+
+    fullImg.onclick = () => {zoomOut()}
+}
+
+const zoomIn = () => {
+    const fullImg = document.getElementById("full-img")
+    fullImg.style.height = "80%"
+
+    fullImg.onclick = () => {moreZoomIn()}
+}
+
+document.getElementById("full-img").onclick = () => {moreZoomIn()}
+
 const loadFullImg = (imgName) => {
     document.getElementById("full-img-div").style.display = "flex";
     document.getElementById("full-img").src = `./imgs/${imgName}`;
