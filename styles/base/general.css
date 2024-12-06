@@ -55,6 +55,10 @@ a:hover, button:hover, button:hover *, a:hover * {
     cursor: var(--pointer) !important;
 }
 
+a.inline-url {
+    text-decoration: underline;
+}
+
 button {
     background: none;
     border: none;
