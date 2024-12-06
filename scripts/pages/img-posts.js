@@ -92,6 +92,7 @@ const moveImg = (dir) => {
 // LOAD FULL IMG ON BACK/FOWARD BROWSER INTERACTION
 window.addEventListener("popstate", (e) => {
     let imgParam = getImgParam();
+    if (imgParam == null) { return } // fix jump issues 
     loadFullImg(imgParam);
 });
 
