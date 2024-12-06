@@ -23,6 +23,7 @@ const addRefImg = () => {
             
             if (img.style.visibility == "hidden") {
                 imgUrl.style.visibility = "hidden"
+                imgList.pop(imgTitle)
             }
 
             img.parentNode.insertBefore(imgUrl, img)
