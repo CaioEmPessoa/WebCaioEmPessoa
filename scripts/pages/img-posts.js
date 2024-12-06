@@ -21,6 +21,10 @@ const addRefImg = () => {
     
             imgUrl.href = "?img=" + imgTitle;
             
+            if (img.style.visibility == "hidden") {
+                imgUrl.style.visibility = "hidden"
+            }
+
             img.parentNode.insertBefore(imgUrl, img)
             imgUrl.appendChild(img);
         }
