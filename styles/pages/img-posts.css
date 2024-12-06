@@ -23,14 +23,18 @@
     margin: 15px 0px;
 }
 
-.imgs-row img {
+.imgs-row a {
     margin: 0px 15px;
     min-width: 0;
     flex: 1;
     width: 100%;
     max-width: 100%;
+}
+
+.imgs-row img {
     object-fit: contain;
-    cursor: var(--pointer);
+    width: 100%;
+    max-width: 100%;
 }
 
 .imgs-desc {
