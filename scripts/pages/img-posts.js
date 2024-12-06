@@ -127,8 +127,8 @@ document.addEventListener('keydown', (event) => {
 });
 
 // CLICK ON WEB BUTTONS 
-document.getElementById("left-arrow").onclick = () => moveImg(-1);
-document.getElementById("right-arrow").onclick = () => moveImg(+1);
+document.getElementById("full-img-left-arrow").onclick = () => moveImg(-1);
+document.getElementById("full-img-right-arrow").onclick = () => moveImg(+1);
 
 // CLICK OUTSIDE OF IMG TO CLOSE IT
 document.getElementById("exit-div").onclick = () => {backProjPage()}
