@@ -36,7 +36,7 @@ addRefImg()
 
 const zoomOut = () => {
     const fullImg = document.getElementById("full-img")
-    fullImg.style.height = "70%"
+    fullImg.style.height = "55%"
     fullImg.style.cursor = "zoom-in"
 
     fullImg.onclick = () => {zoomIn()}
@@ -57,7 +57,7 @@ const zoomIn = () => {
     fullImg.onclick = () => {moreZoomIn()}
 }
 
-document.getElementById("full-img").onclick = () => {moreZoomIn()}
+document.getElementById("full-img").onclick = () => {zoomIn()}
 
 const loadFullImg = (imgName) => {
     document.getElementById("full-img-div").style.display = "flex";
