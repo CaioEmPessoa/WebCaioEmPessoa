@@ -6,7 +6,7 @@ petDiv.style.backgroundImage = "url('./img/preview.jpg')";
 petDiv.ondragstart = function() { return false; };
 
 petDiv.onmousedown = () => {
-    petDiv.style.cursor = "grabbing";
+    petDiv.style.cursor = "grabbing!important";
     hand.style.visibility = "visible";
 };
 
