@@ -52,7 +52,8 @@ a {
 }
 
 a:hover, button:hover, button:hover *, a:hover * {
-    cursor: var(--pointer) !important;
+    cursor: var(--pointer);
+    color: var(--txt-hover)!important;
 }
 
 a.inline-url {
