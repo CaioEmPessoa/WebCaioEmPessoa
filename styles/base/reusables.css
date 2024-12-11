@@ -123,6 +123,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .top-menu-itens a {
     border-right: solid 3px var(--border);
     border-left: solid 3px var(--border);
@@ -134,11 +135,18 @@
   }
 
   .top-menu.fixed {
-    display: none;
+    visibility: hidden;
   }
 
   .top-menu-itens {
-    visibility: visible!important;
+    visibility: visible;
+  }
+
+  .top-menu-return {
+    position: absolute;
+    justify-self: center;
+    width: 50px;
+    stroke: var(--accent-2);
   }
 
 }
