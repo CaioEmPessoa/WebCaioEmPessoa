@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+/* CONSTANTS */
 .side-menu-btn {
   stroke: var(--accent);
   stroke-width:5;
@@ -48,6 +49,8 @@
 .top-menu-itens a {
   margin: 5px 10px
 }
+
+/* END CONSTANTS */
 
 .content {
   width: 70%;
@@ -110,6 +113,24 @@
 
   .top-menu {
     margin-bottom: 5px;
+    width: 100%;
+    font-size: 15px;
+    text-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  .top-menu-itens {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .top-menu-itens a {
+    border-right: solid 3px var(--border);
+    border-left: solid 3px var(--border);
+    padding: 0px 5px ;
+  }
+
+  .top-menu-itens hr {
+    display: none;
   }
 
   .top-menu.fixed {
