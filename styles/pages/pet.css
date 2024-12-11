@@ -42,5 +42,5 @@
 }
 
 .pet-buttons button:hover {
-    background-color: var(--hover);
+    background-color: var(--bg-hover);
 }
