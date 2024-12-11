@@ -51,7 +51,7 @@ export const General = () => {
   
     if (topMenuDiv == null || topMenuFixedDiv == null) { return } // when open a page already scrolled, some menus may not appear
 
-    if (window.scrollY <= 10) {
+    if (window.scrollY <= 30) {
       topMenuDiv.style.visibility = "initial"
       topMenuFixedDiv.style.visibility = "hidden"
       if (window.screen.width <= 800) {
