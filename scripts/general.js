@@ -53,9 +53,19 @@ export const General = () => {
     if (window.scrollY <= 10) {
       topMenuDiv.style.visibility = "initial"
       topMenuFixedDiv.style.visibility = "hidden"
+      if (window.screen.width <= 800) {
+        document.getElementById("top-menu-return").style.visibility = "hidden"
+      }
+
     } else {
       topMenuDiv.style.visibility = "hidden"
       topMenuFixedDiv.style.visibility = "initial"
+      if (window.screen.width <= 800) {
+        document.getElementById("top-menu-return").style.visibility = "visible"
+        topMenuFixedDiv.style.visibility = "hidden"
+      } else {
+        topMenuFixedDiv.style.visibility = "initial"
+      }
     }
   }
   

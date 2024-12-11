@@ -1,3 +1,4 @@
+
 <div class="top-menu">
     <div class="top-menu-itens" id="top-menu">
 
@@ -5,6 +6,13 @@
 </div>
 
 <div class="top-menu fixed">
+    <div class="top-menu-return" id="top-menu-return">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+            <path d="M12 16V8M8 12l4-4 4 4" stroke="white" stroke-width="2" fill="none"/>
+        </svg>
+    </div>
+
     <div class="top-menu-itens" id="top-menu-fixed">
 
     </div>
@@ -15,6 +23,8 @@
     const topMenuFixed = document.getElementById("top-menu-fixed");
 
     const jumpDivList = Array.from(document.getElementsByTagName("div"))
+
+    topMenu.appendChild(document.createElement("hr")) // first hr 
 
     for (let i = 0; i < jumpDivList.length; i++) {
         const el = jumpDivList[i]
