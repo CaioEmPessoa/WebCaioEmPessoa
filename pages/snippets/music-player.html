@@ -1,6 +1,6 @@
 <div class="music-player">
-    <button class="change-song-btn" onclick="slideInSongs(this)">
-        <img src="/src/imgs/pfp/5LYzTBVoS196gvYvw3zjwD-LVzGBKNSl0pxunJkab3I.gif" class="song-cover-art">
+    <button class="change-song-btn" id="change-song-btn" onclick="slideInSongs(this)">
+        <img src="/src/imgs/pfp/5LYzTBVoS196gvYvw3zjwD-LVzGBKNSl0pxunJkab3I.gif" class="song-cover-art" id="song-cover-art">
     </button>
 
     <div class="song-choices" id="song-choices">
@@ -40,37 +40,36 @@
         <div class="song-play-bar"></div>
     </div>
 
-    <p class="song-time">00:00</p>
+    <p class="song-time" id="song-time">00:00</p>
 
-    <button class="play-btn"><img src="/src/imgs/ply.png" class="play-btn-img"></button>
+    <button class="play-btn" id="play-btn" onclick="playSong()"><img id="play-btn-img" src="/src/imgs/play.png" class="play-btn-img"></button>
 </div>
 
-<script>
+<script async>
+
+    let song;
 
     function songChoiceFunctions() {
-        
         const optionsBtn = document.querySelectorAll(".song-choice-btn")
         const optionsInfo = document.querySelectorAll(".song-option-info")
 
         for (let i = 0; i < optionsBtn.length; i++) {
-        const optnBtn = optionsBtn[i]
-        const optnInfo = optionsInfo[i]
+            const optnBtn = optionsBtn[i]
+            const optnInfo = optionsInfo[i]
 
-        optnBtn.onmouseover = () => {
-            optnInfo.style.visibility = "visible"
-            console.log(optnInfo.offsetHeight)
-            if (optnInfo.offsetHeight >= 140) {
-                optnInfoP = optnInfo.getElementsByTagName("p")[0] // can only have one P 
-                
-                optnInfoP.style.animation = "songInfoMarquee 5s linear infinite"
+            optnBtn.onmouseover = () => {
+                optnInfo.style.visibility = "visible"
+                console.log(optnInfo.offsetHeight)
+                if (optnInfo.offsetHeight >= 140) {
+                    optnInfoP = optnInfo.getElementsByTagName("p")[0] // can only have one P 
+                    
+                    optnInfoP.style.animation = "songInfoMarquee 5s linear infinite"
+                }
+            }
+            optnBtn.onmouseout = () => {
+                optnInfo.style.visibility = "hidden"
             }
         }
-        optnBtn.onmouseout = () => {
-            optnInfo.style.visibility = "hidden"
-        }
-   
-    }
-
     }
 
     function slideInSongs() {
@@ -84,5 +83,57 @@
     }
     
     setTimeout(function(){songChoiceFunctions()}, 500); // i know and i hate myself for this
+    
+    let updtRun = false
+    function updateTime() {
+        if (updtRun == true)  {return}
+        
+        updtRun = true
+        const songTime = document.getElementById("song-time")
+        
+        songTime.innerHTML = song.currentTime
+        const minutes = Math.floor(song.currentTime / 60);
+        const seconds = Math.floor(song.currentTime % 60);
+        songTime.innerHTML = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        
+        updtRun = false
+        setTimeout(function(){updateTime()}, 1000);
+    }
+    
+    function pauseSong() {
+        song.pause()
+        
+        const playBtn = document.getElementById("play-btn")
+        const playBtnImg = document.getElementById("play-btn-img")
+        playBtnImg.src = "/src/imgs/play.png"
+        playBtn.onclick = () => {playSong()}
+    }
+    function playSong() {
+        song.play()
+        updateTime()
+
+        const playBtn = document.getElementById("play-btn")
+        const playBtnImg = document.getElementById("play-btn-img")
+        playBtnImg.src = "/src/imgs/pause.png"
+        playBtn.onclick = () => {pauseSong()}
+    }
+
+    function loadSong(img, mp3, time, optn) {
+        changeSongBtn = document.getElementById("change-song-btn")
+        songArt = document.getElementById("song-cover-art")
+
+        if (optn == undefined) {
+            changeSongBtn.onclick = () => {}
+        }
+
+        songArt.src = img
+        song = new Audio(mp3);
+        
+        if (time != undefined) {
+            song.currentTime = time
+        }
+    }
+
+    var musicLoaded = true
 
 </script>
