@@ -134,7 +134,7 @@
     display: none;
   }
 
-  .top-menu.fixed {
+  .top-menu.fixed .top-menu-itens {
     visibility: hidden;
   }
 
