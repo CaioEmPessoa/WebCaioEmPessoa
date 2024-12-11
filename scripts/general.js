@@ -37,6 +37,7 @@ export const General = () => {
     var scripts = elmnt.getElementsByTagName("script");
     for (var i = 0; i < scripts.length; i++) {
       var script = document.createElement("script");
+      script.async = true;
       script.text = scripts[i].text;
       document.head.appendChild(script).parentNode.removeChild(script);
     }
@@ -74,6 +75,36 @@ export const General = () => {
   let configBtn = document.getElementById("config-btn")
   configBtn.onclick = () => {alert("Não faço nada ainda :P")}
  
+  /*
+    CODE TO SWIPE TO OPEN CONFIG / TABS ON MOBILE
+    const onPointerMove = () => {
+        if (isDragging == false) return
+        
+        const dragDiff = event.clientX - dragStart;
+        if (Math.abs(dragDiff) > 8) { 
+            if (dragDiff > 0) {
+                moveImg(-1);  // left
+            } else {
+                moveImg(1);   // right
+            }
+        }
+    }
+    const onPointerDown = (event) => {
+        dragStart = event.clientX;
+        isDragging = true;
+    };
+    const onPointerUp = (event) => {
+        isDragging = false;
+    };
+    // Add event listeners to the image container
+    // !!!!!! REMOVED CAUSE BETTER WIHOUT IT BUT MAITAIN CODE IF CHANGE IN FUTURE !!!!!! //
+    // const imgContainer = document.getElementById("full-img-div");
+    // imgContainer.addEventListener("pointerdown", onPointerDown);
+    // imgContainer.addEventListener("pointermove", onPointerMove);
+    // imgContainer.addEventListener("pointerup", onPointerUp);
+    // imgContainer.addEventListener("pointerleave", onPointerUp);
 
+
+  */
   
 }
