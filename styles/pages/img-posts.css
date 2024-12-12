@@ -5,8 +5,17 @@
 }
 
 .img-post-about {
-    width: 70%;
+    width: 100%;
+    text-align: justify;
     margin: 10px auto 0px auto;
+}
+.img-post-about.main-about {
+  width: 70%;
+  text-indent: 30px;
+}
+
+.img-post-about p {
+  font-size: 22px;
 }
 
 .imgs-container {
