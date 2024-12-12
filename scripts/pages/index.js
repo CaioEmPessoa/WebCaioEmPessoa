@@ -31,7 +31,9 @@ let imgs = [];
 let imgIndex = 0;
 const pfpImg = document.getElementById("pfp-img");
 
-$.getJSON('/src/imgs/pfp/', img_l => {
+fetch('/src/imgs/pfp/index.html')
+.then(response => response.json())
+.then(img_l => {
     shuffle(img_l);
     imgs = img_l
     pfpImg.src = "/src/imgs/pfp/" + imgs[imgIndex];
