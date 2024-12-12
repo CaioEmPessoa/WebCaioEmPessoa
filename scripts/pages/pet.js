@@ -5,15 +5,35 @@ petDiv.style.backgroundImage = "url('./img/preview.jpg')";
 
 petDiv.ondragstart = function() { return false; };
 
-petDiv.onmousedown = () => {
-    petDiv.style.cursor = "grabbing!important";
-    hand.style.visibility = "visible";
-};
+// behaviour on mobile devices
+if (document.documentElement.clientWidth <= 800) {
 
-petDiv.onmouseup = () => {
-    petDiv.style.cursor = "grab";
-    hand.style.visibility = "hidden";
-};
+    const showHand = () => {
+        petDiv.style.cursor = "grabbing!important";
+        hand.style.visibility = "visible";
+        petDiv.onclick = () => { hideHand() };
+    }
+
+    const hideHand = () => {
+        petDiv.style.cursor = "grab";
+        hand.style.visibility = "hidden";
+        petDiv.onclick = () => { showHand() };
+    }
+
+    petDiv.onclick = () => { showHand() };
+    
+} else {
+    // default (preferable) behaviour of petpet click
+    petDiv.onmousedown = () => {
+        petDiv.style.cursor = "grabbing!important";
+        hand.style.visibility = "visible";
+    };
+
+    petDiv.onmouseup = () => {
+        petDiv.style.cursor = "grab";
+        hand.style.visibility = "hidden";
+    };
+}
 
 const fileInput = document.getElementById('fileInput');
 const changeImgBtn = document.getElementById('change-img');
@@ -56,4 +76,4 @@ function handleSubmit(event) {
     uploadFiles();
 }
 
-form.addEventListener('submit', handleSubmit);
+// form.addEventListener('submit', handleSubmit); // not being used?? but triggers an error
