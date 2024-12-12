@@ -35,7 +35,7 @@
 
 .top-menu.fixed {
   position: fixed;
-  z-index: 99;
+  z-index: 10;
   bottom: 0;
   margin-bottom: 30px;
   visibility: hidden;
