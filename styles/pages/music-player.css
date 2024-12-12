@@ -136,12 +136,17 @@
 }
 
 @media (max-width:800px) {
+    .music-player {
+        padding: 20px 0px;
+        margin: 0px 10px;
+    }
+
     .music-player .song-cover-art {
-        width: 35pxx;
+        width: 30pxx;
     }
 
     .play-btn-img {
-        width: 30px;
+        width: 25px;
     }
 
     .song-choices {
