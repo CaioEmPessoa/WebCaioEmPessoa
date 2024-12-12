@@ -17,9 +17,10 @@ const addRefImg = () => {
             const imgTitle = img.src.split("/imgs/")[1]
             imgList.push(imgTitle)
 
-            const imgUrl = document.createElement("a");
+            const imgUrl = document.createElement("button");
     
-            imgUrl.href = "?img=" + imgTitle;
+            imgUrl.title = "?img=" + imgTitle;
+            imgUrl.onclick = () => {loadFirstImg(imgUrl)}
             
             if (img.style.visibility == "hidden") {
                 imgUrl.style.visibility = "hidden"
@@ -85,9 +86,15 @@ const moveImg = (dir) => {
     else if (next_i >= imgList.length) {
         next_i = 0;
     }
-    window.history.pushState(null, 'Jooj Takasse', window.location.pathname + "?img=" + imgList[next_i]);
+    window.history.pushState(null, 'WebCaioEmPessoa', window.location.pathname + "?img=" + imgList[next_i]);
     loadFullImg(imgList[next_i]);
 };
+
+// in other to prevent page from loading
+const loadFirstImg = (e) => {
+    window.history.pushState(null, 'WebCaioEmPessoa', window.location.pathname + e.title);
+    loadFullImg(getImgParam())
+}
 
 // LOAD FULL IMG ON BACK/FOWARD BROWSER INTERACTION
 window.addEventListener("popstate", (e) => {
@@ -109,10 +116,10 @@ const backProjPage = () => {
     document.getElementById("full-img").src = "";
     document.getElementsByTagName('html')[0].style.overflow = "scroll";
     
-    let current_img = document.querySelector(`a[href='?img=${getImgParam()}']`);
+    let current_img = document.querySelector(`button[title='?img=${getImgParam()}']`);
     current_img.scrollIntoView();
 
-    window.history.pushState(null, 'Jooj Takasse', window.location.pathname);
+    window.history.pushState(null, 'WebCaioEmPessoa', window.location.pathname);
 }
 
 // PRESS KEYBOARD ARROWKEYS
@@ -123,7 +130,7 @@ document.addEventListener('keydown', (event) => {
 });
 document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight' && getImgParam() != null) {
-        moveImg(1);
+        moveImg(+1);
     }
 });
 
