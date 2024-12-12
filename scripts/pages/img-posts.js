@@ -22,8 +22,8 @@ const addRefImg = () => {
             imgUrl.title = "?img=" + imgTitle;
             imgUrl.onclick = () => {loadFirstImg(imgUrl)}
             
-            if (img.style.visibility == "hidden") {
-                imgUrl.style.visibility = "hidden"
+            if (img.classList == "null img") {
+                imgUrl.style.classList = "null img"
                 imgList.pop(imgTitle)
             }
 
@@ -58,7 +58,10 @@ const zoomIn = () => {
     fullImg.onclick = () => {moreZoomIn()}
 }
 
-document.getElementById("full-img").onclick = () => {zoomIn()}
+// if not on mobile device
+if (document.documentElement.clientWidth >= 800) {
+    document.getElementById("full-img").onclick = () => {zoomIn()}
+}
 
 const loadFullImg = (imgName) => {
     document.getElementById("full-img-div").style.display = "flex";
