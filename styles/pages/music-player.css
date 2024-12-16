@@ -109,8 +109,23 @@
     text-wrap: nowrap;
     transform: rotate(180deg);
     background-color: var(--disabled-bg);
+    transform: rotateX(180deg) rotateY(180deg);
 
     visibility: hidden;
+}
+
+.song-title {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    writing-mode: tb-rl;
+    transform: rotateX(180deg) rotateY(180deg);
+
+    margin-left: -50px;
+    text-wrap: nowrap;
+}
+
+.song-title p {
 }
 
 .song-choice-infos .song-option-info p {
