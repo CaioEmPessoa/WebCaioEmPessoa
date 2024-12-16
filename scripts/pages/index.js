@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
 
     const musicLoaded = () => {
         try {
-            loadSong(songThumb, songDefault, 405.75);
+            loadSong(songThumb, songDefault, songTitle, 405.75);
         } catch (e) {
             setTimeout(function(){musicLoaded()}, 5);
         }
