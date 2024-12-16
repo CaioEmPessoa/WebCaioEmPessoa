@@ -43,6 +43,11 @@
     <p class="song-time" id="song-time">00:00</p>
 
     <button class="play-btn" id="play-btn" onclick="playSong()"><img id="play-btn-img" src="/src/imgs/play.png" class="play-btn-img"></button>
+
+    <div class="song-title">
+        <p id="song-title-p">TESTE TESTE</p>
+    </div>
+
 </div>
 
 <script async>
@@ -118,15 +123,18 @@
         playBtn.onclick = () => {pauseSong()}
     }
 
-    function loadSong(img, mp3, time, optn) {
+    function loadSong(img, mp3, title, time, optn) {
         changeSongBtn = document.getElementById("change-song-btn")
         songArt = document.getElementById("song-cover-art")
+        songTitle = document.getElementById("song-title-p")
+        
 
         if (optn == undefined) {
             changeSongBtn.onclick = () => {}
         }
 
         songArt.src = img
+        songTitle.innerHTML = title
         song = new Audio(mp3);
         
         if (time != undefined) {
