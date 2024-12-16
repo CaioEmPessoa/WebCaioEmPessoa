@@ -42,5 +42,19 @@ fetch('/src/imgs/pfp/index.html')
     document.getElementById("left-arrow").onclick = () => {changePfp(0)};
 });
 
+// MUSIC THAT WILL PLAY
+window.addEventListener('load', () => {
+    let songThumb = "./src/songs/c_thumb.png";
+    let songDefault = "./src/songs/Close to the Edge.webm";
+    let songTitle = "Close to the Edge"
 
+    const musicLoaded = () => {
+        try {
+            loadSong(songThumb, songDefault, 405.75);
+        } catch (e) {
+            setTimeout(function(){musicLoaded()}, 5);
+        }
+    }
+    musicLoaded()
 
+});
