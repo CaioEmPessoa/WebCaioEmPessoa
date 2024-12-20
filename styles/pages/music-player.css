@@ -167,4 +167,8 @@
     .song-choices {
         transform: translateX(100vw);
     }
+
+    .song-title {
+        visibility: hidden;
+    }
 }
