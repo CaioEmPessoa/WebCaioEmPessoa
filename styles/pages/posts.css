@@ -1,0 +1,17 @@
+@import url(./img-posts.css);
+@import url(./text-posts.css);
+
+.content.posts-content {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.posts-main-about {
+    width: 70%;
+    text-indent: 30px;
+    text-align: justify;
+    margin: 10px auto 0px auto;
+  }
+  
+
