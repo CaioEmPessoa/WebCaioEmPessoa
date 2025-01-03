@@ -9,6 +9,14 @@ fetch('./text-posts.json')
         let postData = allPostsData[el]
 
         const textPostDiv = document.createElement("div")
+        textPostsContainer.append(textPostDiv)
+        
+        // if json has custom code for post
+        if (postData["code"] !== "") {
+            textPostDiv.innerHTML = postData["code"]
+            return
+        }
+
         textPostDiv.classList = "text-post"
 
         const leftContent = document.createElement("div")
@@ -53,7 +61,6 @@ fetch('./text-posts.json')
         
         rightContent.append(postTitleDiv, postSeparator, postText)
         textPostDiv.append(leftContent, rightContent)
-        textPostsContainer.append(textPostDiv)
 
 
     });
