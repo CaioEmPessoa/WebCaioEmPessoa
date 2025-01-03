@@ -33,12 +33,13 @@
     margin: 0px 15px;
 }
 
-.post-title {
-    font-size: 25px;
+.post-title-separator {
+    display: inline;
+    margin-right: 15px;
 }
 
-.post-title-separator {
-    margin: 10px 0px;
+.post-title {
+    font-size: 25px;
 }
 
 .post-text {
