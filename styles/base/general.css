@@ -74,8 +74,9 @@ button.disabled, a.disabled {
     cursor: var(--auto)!important;
 }
 
-button.disabled:hover {
+button.disabled:hover, a.disabled:hover {
     background-color: var(--disabled-bg);
+    color: gray!important;
 }
 
 hr {
