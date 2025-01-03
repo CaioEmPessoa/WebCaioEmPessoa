@@ -1,0 +1,10 @@
+{
+    "1": {
+        "id":"1",
+        "title":"title",
+        "date":"12-12-12",
+        "mood":"😀",
+        "pfp":"pfp_name.jpg",
+        "content":"lorem ipsum dolor sit amet"
+    }
+}
