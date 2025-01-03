@@ -7,3 +7,40 @@
     border: solid 2px var(--border);
     padding: 2px 3px;
 }
+
+.text-post {
+    display: flex;
+    width: 60%;
+    margin: 15px auto 0px auto;
+    padding: 25px;
+    border: solid 1px var(--border);
+}
+
+.text-post-pfp {
+    max-width: 150px;
+    max-height: 150px;
+    border: solid 3px var(--border);
+    border-radius: 100px;
+}
+
+.text-post-date {
+    margin-top: 5px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.text-post-right-content {
+    margin: 0px 15px;
+}
+
+.post-title {
+    font-size: 25px;
+}
+
+.post-title-separator {
+    margin: 10px 0px;
+}
+
+.post-text {
+    text-indent: 30px;
+}
