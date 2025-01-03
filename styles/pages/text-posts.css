@@ -1,0 +1,9 @@
+.text-post-about-socials {
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.text-post-about-socials a {
+    border: solid 2px var(--border);
+    padding: 2px 3px;
+}
